@@ -188,15 +188,36 @@
       });
     });
 
-    btnContinuar.addEventListener("click", () => {
+    btnContinuar.addEventListener("click", async () => {
       if (perfilSelecionado === "card-aluno") {
-        alert("Você escolheu: Aluno");
-        // Aqui poderia redirecionar para outra página
+        await selecionarPerfil("aluno");
       } else if (perfilSelecionado === "card-professor") {
-        alert("Você escolheu: Professor");
-        // Aqui poderia redirecionar para outra página
+        await selecionarPerfil("professor");
       }
     });
+
+    async function selecionarPerfil(profileType) {
+      try {
+        const response = await fetch('/api/profile/select', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ profile_type: profileType })
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+          alert(`${result.message}! Perfil: ${result.profile}`);
+          // Aqui pode redirecionar para dashboard específico do perfil
+        } else {
+          alert(result.message);
+        }
+      } catch (error) {
+        alert('Erro ao selecionar perfil. Tente novamente.');
+      }
+    }
   </script>
 </body>
 </html>

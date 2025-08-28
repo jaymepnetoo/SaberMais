@@ -193,15 +193,63 @@
       formLogin.style.display = "none";
     });
 
-    // Simulação de envio
-    formLogin.addEventListener("submit", (e) => {
+    // Envio do formulário de login
+    formLogin.addEventListener("submit", async (e) => {
       e.preventDefault();
-      alert("Login realizado com sucesso!");
+      
+      const email = formLogin.querySelector('input[type="email"]').value;
+      const password = formLogin.querySelector('input[type="password"]').value;
+      
+      try {
+        const response = await fetch('/api/auth/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email, password })
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+          alert(result.message);
+          window.location.href = result.redirect;
+        } else {
+          alert(result.message);
+        }
+      } catch (error) {
+        alert('Erro ao fazer login. Tente novamente.');
+      }
     });
 
-    formRegister.addEventListener("submit", (e) => {
+    // Envio do formulário de registro
+    formRegister.addEventListener("submit", async (e) => {
       e.preventDefault();
-      alert("Cadastro realizado com sucesso!");
+      
+      const name = formRegister.querySelector('input[type="text"]').value;
+      const email = formRegister.querySelector('input[type="email"]').value;
+      const password = formRegister.querySelector('input[type="password"]').value;
+      
+      try {
+        const response = await fetch('/api/auth/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ name, email, password })
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+          alert(result.message);
+          window.location.href = result.redirect;
+        } else {
+          alert(result.message);
+        }
+      } catch (error) {
+        alert('Erro ao fazer cadastro. Tente novamente.');
+      }
     });
   </script>
 </body>
