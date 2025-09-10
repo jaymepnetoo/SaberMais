@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turmas - Saber+ Gestor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <div class="logo-icon"><img src="../images/logo.jpg" alt="Logo Saber+"></div>
+                <div class="logo-text">
+                    <h1>Saber+ </h1>
+                    <p>Bem-vindo!</p>
+                </div>
+            </div>
+        </div>
+        <div class="header-right">
+            <button class="btn-primary">+ Criar Quiz</button>
+            <button class="btn-secondary"><div class="cabeçalho-icon"><img src="../images/Relatórios.jpg" alt="relatorio"></div> Relatórios</button>
+            <button class="btn-secondary"><div class="cabeçalho-icon"><img src="../images/sair.jpg" alt="relatorio"></div> Sair</button>
+        </div>
+    </header>
+
+    <!-- Navegação Principal -->
+    <nav class="main-nav">
+        <div class="nav-item" onclick="window.location.href='VisaoGeral.html'">Visão Geral</div>
+        <div class="nav-item" onclick="window.location.href='Quizzes.html'">Meus Quizzes</div>
+        <div class="nav-item active">Turmas</div>
+        <div class="nav-item" onclick="window.location.href='Relatorios.html'">Relatórios</div>
+        <div class="nav-item" onclick="window.location.href='Foruns.html'">Fórum</div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <div class="page-header">
+            <h1>Gerenciar Turmas</h1>
+        </div>
+
+        <!-- Grid de Turmas -->
+        <div class="classes-grid">
+            <!-- Turma 8° A -->
+            <div class="class-card">
+                <div class="class-header">
+                    <h3>8° A</h3>
+                    <p>30 alunos matriculados</p>
+                </div>
+                <div class="class-stats">
+                    <div class="stat-row">
+                        <span>Média da turma:</span>
+                        <span class="stat-value">82%</span>
+                    </div>
+                    <div class="stat-row">
+                        <span>Quizzes ativos:</span>
+                        <span class="stat-value">3</span>
+                    </div>
+                </div>
+                <button class="manage-btn">👥 Gerenciar Turma</button>
+            </div>
+
+            <!-- Turma 8° B -->
+            <div class="class-card">
+                <div class="class-header">
+                    <h3>8° B</h3>
+                    <p>28 alunos matriculados</p>
+                </div>
+                <div class="class-stats">
+                    <div class="stat-row">
+                        <span>Média da turma:</span>
+                        <span class="stat-value">79%</span>
+                    </div>
+                    <div class="stat-row">
+                        <span>Quizzes ativos:</span>
+                        <span class="stat-value">2</span>
+                    </div>
+                </div>
+                <button class="manage-btn">👥 Gerenciar Turma</button>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

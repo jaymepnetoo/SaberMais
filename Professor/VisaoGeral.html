@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saber+</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <div class="logo-icon"><img src="../images/logo.jpg"></div>
+                <div class="logo-text">
+                    <h1>Saber+</h1>
+                    <p>Bem-vindo!</p>
+                </div>
+            </div>
+        </div>
+        <div class="header-right">
+            <button class="btn-primary">+ Criar Quiz</button>
+            <button class="btn-secondary"><div class="cabeçalho-icon"><img src="../images/Relatórios.jpg" alt="relatorio"></div> Relatórios</button>
+            <button class="btn-secondary"><div class="cabeçalho-icon"><img src="../images/sair.jpg" alt="relatorio"></div> Sair</button>
+        </div>
+    </header>
+
+    <!-- Navegação Principal -->
+    <nav class="main-nav">
+        <div class="nav-item active">Visão Geral</div>
+        <div class="nav-item" onclick="window.location.href='Quizzes.html'">Meus Quizzes</div>
+        <div class="nav-item" onclick="window.location.href='MinhasTurmas.html'">Turmas</div>
+        <div class="nav-item" onclick="window.location.href='Relatorios.html'">Relatórios</div>
+        <div class="nav-item" onclick="window.location.href='Foruns.html'">Fórum</div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <!-- Cards de Métricas -->
+        <section class="metrics-section">
+            <div class="metric-card">
+                <div class="metric-icon"><img src="../images/Alunos.jpg" alt="totalAlunos" ></div>
+                <div class="metric-content">
+                    <h3>Total de Alunos</h3>
+                    <div class="metric-value" id="totalAlunos">--</div>
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon"><img src="../images/MeusQuizzes.jpg" alt="Quizzes" ></div>
+                <div class="metric-content">
+                    <h3>Quizzes Criados</h3>
+                    <div class="metric-value" id="quizzesCriados">--</div>
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon"><img src="../images/TaxaDeParticipação.jpg" alt="Participação" ></div>
+                <div class="metric-content">
+                    <h3>Taxa de Participação</h3>
+                    <div class="metric-value" id="taxaParticipacao">--%</div>
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon"><img src="../images/MédiaGeral.jpg" alt="Média" ></div>
+                <div class="metric-content">
+                    <h3>Média Geral</h3>
+                    <div class="metric-value" id="mediaGeral">--%</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seções Principais -->
+        <section class="content-sections">
+            <!-- Atividade Recente -->
+            <div class="section-card">
+                <div class="section-header">
+                    <h2>Atividade Recente</h2>
+                    <p>Últimos quizzes criados e resultados</p>
+                </div>
+                <div class="activity-list" id="atividadeRecente">
+                    <p>Nenhum quiz criado ainda.</p>
+                </div>
+            </div>
+
+            <!-- Performance das Turmas -->
+            <div class="section-card">
+                <div class="section-header">
+                    <h2>Performance das Turmas</h2>
+                    <p>Média de pontuação por turma</p>
+                </div>
+                <div class="performance-list" id="performanceTurmas">
+                    <p>Nenhuma turma cadastrada ainda.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Script para preencher dinamicamente -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+

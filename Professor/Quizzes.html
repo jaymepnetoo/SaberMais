@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Quizzes - Saber+ Gestor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <div class="logo-icon"><img src="../images/logo.jpg" alt="Logo Saber+"></div>
+                <div class="logo-text">
+                    <h1>Saber+ </h1>
+                    <p>Bem-vindo!</p>
+                </div>
+            </div>
+        </div>
+        <div class="header-right">
+            <button class="btn-primary">+ Criar Quiz</button>
+            <button class="btn-secondary"><div class="cabeçalho-icon"><img src="../images/Relatórios.jpg" alt="relatorio"></div> Relatórios</button>
+            <button class="btn-secondary"><div class="cabeçalho-icon"><img src="../images/sair.jpg" alt="relatorio"></div> Sair</button>
+        </div>
+    </header>
+
+    <!-- Navegação Principal -->
+    <nav class="main-nav">
+        <div class="nav-item" onclick="window.location.href='VisaoGeral.html'">Visão Geral</div>
+        <div class="nav-item active">Meus Quizzes</div>
+        <div class="nav-item" onclick="window.location.href='MinhasTurmas.html'">Turmas</div>
+        <div class="nav-item" onclick="window.location.href='Relatorios.html'">Relatórios</div>
+        <div class="nav-item" onclick="window.location.href='Foruns.html'">Fórum</div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <div class="page-header">
+            <h1>Meus Quizzes</h1>
+            <button class="btn-primary">+ Novo Quiz</button>
+        </div>
+
+        <!-- Lista de Quizzes -->
+        <div id="quiz-list" class="quiz-list">
+            <p id="no-quizzes-msg">Nenhum quiz criado ainda.</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
