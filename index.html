@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saber+ - Login</title>
+  <link rel="stylesheet" href="index.css">
+
+
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="./images/logo.jpg"><span>Saber+</span>
+    </div>
+    <p class="subtitle">Acesse sua plataforma educacional personalizada</p>
+
+    <div class="card">
+      <h2>Bem-vindo de volta!</h2>
+      <p>Entre na sua conta ou crie uma nova para começar</p>
+
+      <!-- Abas -->
+      <div class="tabs">
+        <div class="tab active" id="tab-login">Entrar</div>
+        <div class="tab" id="tab-register">Registrar</div>
+      </div>
+
+      <!-- Formulário -->
+      <form id="form-login">
+        <label>Email</label>
+        <input type="email" placeholder="seu@email.com" required>
+
+        <label>Senha</label>
+        <input type="password" placeholder="********" required>
+
+        <button type="submit" class="btn">Entrar</button>
+      </form>
+
+      <form id="form-register" style="display:none;">
+        <label>Nome</label>
+        <input type="text" placeholder="Seu nome" required>
+
+        <label>Email</label>
+        <input type="email" placeholder="seu@email.com" required>
+
+        <label>Instituição</label>
+        <input type="number" placeholder="Código da instituição parceira" required>
+
+        <label>Senha</label>
+        <input type="password" placeholder="********" required>
+
+        <button type="submit" class="btn">Registrar</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Alternância entre abas
+    const tabLogin = document.getElementById("tab-login");
+    const tabRegister = document.getElementById("tab-register");
+    const formLogin = document.getElementById("form-login");
+    const formRegister = document.getElementById("form-register");
+
+    tabLogin.addEventListener("click", () => {
+      tabLogin.classList.add("active");
+      tabRegister.classList.remove("active");
+      formLogin.style.display = "block";
+      formRegister.style.display = "none";
+    });
+
+    tabRegister.addEventListener("click", () => {
+      tabRegister.classList.add("active");
+      tabLogin.classList.remove("active");
+      formRegister.style.display = "block";
+      formLogin.style.display = "none";
+    });
+
+    // Simulação de envio
+    formLogin.addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("Login realizado com sucesso!");
+    });
+
+    formRegister.addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("Cadastro realizado com sucesso!");
+    });
+  </script>
+</body>
+</html>
