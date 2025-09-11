@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saber+ Aluno - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <span class="logo-icon">📚</span>
+                <div class="logo-text">
+                    <h1>Saber+ Aluno</h1>
+                    <p>Bem-vindo, João!</p>
+                </div>
+            </div>
+        </div>
+        <div class="header-right">
+            <button class="logout-btn">
+                <span class="logout-icon">🚪</span>
+                Sair
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Top Stats Cards -->
+        <section class="stats-section">
+            <div class="stat-card">
+                <div class="stat-icon">🎯</div>
+                <div class="stat-content">
+                    <h3>Quizzes Realizados</h3>
+                    <div class="stat-number">12</div>
+                    <div class="stat-detail">+2 desde ontem</div>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">⭐</div>
+                <div class="stat-content">
+                    <h3>Pontuação Total</h3>
+                    <div class="stat-number">890</div>
+                    <div class="stat-detail">3º lugar na turma</div>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">📈</div>
+                <div class="stat-content">
+                    <h3>Média Geral</h3>
+                    <div class="stat-number">85%</div>
+                    <div class="stat-detail">+5% este mês</div>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">🏆</div>
+                <div class="stat-content">
+                    <h3>Conquistas</h3>
+                    <div class="stat-number">7</div>
+                    <div class="stat-detail">badges conquistadas</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Grid -->
+        <section class="content-grid">
+            <!-- Left Column - Available Quizzes -->
+            <div class="left-column">
+                <div class="section-card">
+                    <div class="section-header">
+                        <h2>Quizzes Disponíveis</h2>
+                        <p>Complete os quizzes para ganhar pontos e subir no ranking</p>
+                    </div>
+                    
+                    <div class="quiz-list">
+                        <div class="quiz-item">
+                            <div class="quiz-header">
+                                <h3>Matemática - Equações do 2º Grau</h3>
+                                <span class="quiz-status pending">Pendente</span>
+                            </div>
+                            <div class="quiz-details">
+                                <span class="quiz-subject">📐 Matemática</span>
+                                <span class="quiz-questions">❓ 15 questões</span>
+                                <span class="quiz-time">⏱️ 20 min</span>
+                            </div>
+                            <button class="quiz-btn start-btn">
+                                <span class="btn-icon">▶️</span>
+                                Iniciar Quiz
+                            </button>
+                        </div>
+                        
+                        <div class="quiz-item completed">
+                            <div class="quiz-header">
+                                <h3>História - Segunda Guerra Mundial</h3>
+                                <span class="quiz-status completed">Concluído</span>
+                            </div>
+                            <div class="quiz-details">
+                                <span class="quiz-subject">📚 História</span>
+                                <span class="quiz-questions">❓ 20 questões</span>
+                                <span class="quiz-time">⏱️ 25 min</span>
+                            </div>
+                            <div class="quiz-score">Pontuação: 85%</div>
+                            <button class="quiz-btn result-btn">Ver Resultado</button>
+                        </div>
+                        
+                        <div class="quiz-item">
+                            <div class="quiz-header">
+                                <h3>Ciências - Sistema Solar</h3>
+                                <span class="quiz-status pending">Pendente</span>
+                            </div>
+                            <div class="quiz-details">
+                                <span class="quiz-subject">🔬 Ciências</span>
+                                <span class="quiz-questions">❓ 12 questões</span>
+                                <span class="quiz-time">⏱️ 15 min</span>
+                            </div>
+                            <button class="quiz-btn start-btn">
+                                <span class="btn-icon">▶️</span>
+                                Iniciar Quiz
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-column">
+                <!-- Class Ranking -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <h2>Ranking da Turma</h2>
+                        <p>Veja sua posição entre os colegas</p>
+                    </div>
+                    
+                    <div class="ranking-list">
+                        <div class="ranking-item">
+                            <div class="rank-position">1</div>
+                            <div class="rank-avatar">👩</div>
+                            <div class="rank-name">Maria Silva</div>
+                            <div class="rank-score">⭐ 950</div>
+                        </div>
+                        
+                        <div class="ranking-item">
+                            <div class="rank-position">2</div>
+                            <div class="rank-avatar">👨</div>
+                            <div class="rank-name">João Santos</div>
+                            <div class="rank-score">⭐ 920</div>
+                        </div>
+                        
+                        <div class="ranking-item current-user">
+                            <div class="rank-position">3</div>
+                            <div class="rank-avatar">👤</div>
+                            <div class="rank-name">Você</div>
+                            <div class="rank-score">⭐ 890</div>
+                        </div>
+                        
+                        <div class="ranking-item">
+                            <div class="rank-position">4</div>
+                            <div class="rank-avatar">👩</div>
+                            <div class="rank-name">Ana Costa</div>
+                            <div class="rank-score">⭐ 870</div>
+                        </div>
+                        
+                        <div class="ranking-item">
+                            <div class="rank-position">5</div>
+                            <div class="rank-avatar">👨</div>
+                            <div class="rank-name">Pedro Lima</div>
+                            <div class="rank-score">⭐ 850</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Weekly Progress -->
+                <div class="section-card">
+                    <div class="section-header">
+                        <h2>Progresso Semanal</h2>
+                        <p>Meta: 5 quizzes por semana</p>
+                    </div>
+                    
+                    <div class="progress-content">
+                        <div class="progress-text">
+                            <span class="progress-current">3 de 5 quizzes</span>
+                            <span class="progress-percentage">60%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 60%"></div>
+                        </div>
+                        <p class="progress-message">Faltam 2 quizzes para bater sua meta!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-item">
+            <div class="footer-icon">🏆</div>
+            <div class="footer-content">
+                <h4>Conquistas</h4>
+                <p>Ver badges e metas</p>
+            </div>
+        </div>
+        
+        <div class="footer-item">
+            <div class="footer-icon">💬</div>
+            <div class="footer-content">
+                <h4>Fórum</h4>
+                <p>Tire suas dúvidas</p>
+            </div>
+        </div>
+        
+        <div class="footer-item">
+            <div class="footer-icon">📊</div>
+            <div class="footer-content">
+                <h4>Histórico</h4>
+                <p>Ver resultados anteriores</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
