@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saber+ - Selecione seu perfil</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to bottom right, #f9fbff, #f3f0ff);
+    }
+
+    .container {
+      text-align: center;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #5a42f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+
+    .logo span {
+      margin-left: 8px;
+      color: #5a42f5;
+    }
+
+    h2 {
+      margin-top: 20px;
+      font-size: 22px;
+      color: #222;
+    }
+
+    p.subtitle {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      width: 100%;
+      max-width: 380px;
+      text-align: left;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      border: 2px solid #a388f7;
+    }
+
+    .card.active {
+      border: 2px solid #5a42f5;
+      box-shadow: 0 6px 14px rgba(90,66,245,0.2);
+    }
+
+    .card h3 {
+      margin-top: 15px;
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: #222;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style: none;
+      font-size: 14px;
+      color: #444;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      position: relative;
+      padding-left: 15px;
+    }
+
+    ul li::before {
+      content: "•";
+      color: #5a42f5;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    /* Botão */
+    .btn {
+      padding: 12px 30px;
+      background: linear-gradient(to right, #4a68f5, #9442f5);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      📖 <span>Saber+</span>
+    </div>
+    <h2>Selecione seu perfil</h2>
+    <p class="subtitle">Escolha como você irá usar a plataforma</p>
+
+    <div class="cards">
+      <!-- Card Aluno -->
+      <div class="card" id="card-aluno">
+        🎓
+        <h3>Aluno</h3>
+        <p>Acesse quizzes, veja seu progresso e participe de atividades da sua turma</p>
+        <ul>
+          <li>Participar de quizzes</li>
+          <li>Ver ranking da turma</li>
+          <li>Acompanhar progresso</li>
+          <li>Acessar materiais de apoio</li>
+        </ul>
+      </div>
+
+      <!-- Card Professor -->
+      <div class="card" id="card-professor">
+        ⚙️
+        <h3>Professor</h3>
+        <p>Gerencie turmas, crie quizzes e acompanhe o desempenho dos alunos</p>
+        <ul>
+          <li>Criar e gerenciar quizzes</li>
+          <li>Visualizar relatórios detalhados</li>
+          <li>Gerenciar turmas</li>
+          <li>Upload de materiais</li>
+        </ul>
+      </div>
+    </div>
+
+    <button class="btn" id="btnContinuar" disabled>Continuar</button>
+  </div>
+
+  <script>
+    const cards = document.querySelectorAll(".card");
+    const btnContinuar = document.getElementById("btnContinuar");
+    let perfilSelecionado = null;
+
+    cards.forEach(card => {
+      card.addEventListener("click", () => {
+        cards.forEach(c => c.classList.remove("active"));
+        card.classList.add("active");
+        perfilSelecionado = card.id;
+        btnContinuar.disabled = false;
+      });
+    });
+
+    btnContinuar.addEventListener("click", () => {
+      if (perfilSelecionado === "card-aluno") {
+        alert("Você escolheu: Aluno");
+        // Aqui poderia redirecionar para outra página
+      } else if (perfilSelecionado === "card-professor") {
+        alert("Você escolheu: Professor");
+        // Aqui poderia redirecionar para outra página
+      }
+    });
+  </script>
+</body>
+</html>

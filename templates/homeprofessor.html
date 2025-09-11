@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saber+ Gestor</title>
+    <link rel="stylesheet" href="static\style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <div class="logo-icon">📚</div>
+                <div class="logo-text">
+                    <h1>Saber+ Gestor</h1>
+                    <p>Bem-vindo, Prof. Maria!</p>
+                </div>
+            </div>
+        </div>
+        <div class="header-right">
+            <button class="btn-primary">+ Criar Quiz</button>
+            <button class="btn-secondary">📊 Relatórios</button>
+            <button class="btn-secondary">🚪 Sair</button>
+        </div>
+    </header>
+
+    <!-- Navegação Principal -->
+    <nav class="main-nav">
+        <div class="nav-item active">Visão Geral</div>
+        <div class="nav-item" onclick="window.location.href='/meusquizzes'">Meus Quizzes</div>
+        <div class="nav-item" onclick="window.location.href='/turmas'">Turmas</div>
+        <div class="nav-item" onclick="window.location.href='/relatorios'">Relatórios</div>
+        <div class="nav-item" onclick="window.location.href='/forum'">Fórum</div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <!-- Cards de Métricas -->
+        <section class="metrics-section">
+            <div class="metric-card">
+                <div class="metric-icon">👥</div>
+                <div class="metric-content">
+                    <h3>Total de Alunos</h3>
+                    <div class="metric-value">156</div>
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon">📝</div>
+                <div class="metric-content">
+                    <h3>Quizzes Criados</h3>
+                    <div class="metric-value">24</div>
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon">📈</div>
+                <div class="metric-content">
+                    <h3>Taxa de Participação</h3>
+                    <div class="metric-value">87%</div>
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon">⭐</div>
+                <div class="metric-content">
+                    <h3>Média Geral</h3>
+                    <div class="metric-value">78%</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seções Principais -->
+        <section class="content-sections">
+            <!-- Atividade Recente -->
+            <div class="section-card">
+                <div class="section-header">
+                    <h2>Atividade Recente</h2>
+                    <p>Últimos quizzes criados e resultados</p>
+                </div>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-info">
+                            <h4>Matemática - Equações do 2° Grau</h4>
+                            <p>9° A • 28 participantes</p>
+                        </div>
+                        <div class="activity-status active">Ativo</div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-info">
+                            <h4>História - Segunda Guerra Mundial</h4>
+                            <p>9° B • 25 participantes</p>
+                        </div>
+                        <div class="activity-status completed">Finalizado</div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-info">
+                            <h4>Ciências - Sistema Solar</h4>
+                            <p>8° A • 30 participantes</p>
+                        </div>
+                        <div class="activity-status draft">Rascunho</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance das Turmas -->
+            <div class="section-card">
+                <div class="section-header">
+                    <h2>Performance das Turmas</h2>
+                    <p>Média de pontuação por turma</p>
+                </div>
+                <div class="performance-list">
+                    <div class="performance-item">
+                        <div class="class-info">
+                            <h4>8° A</h4>
+                            <p>30 alunos</p>
+                        </div>
+                        <div class="performance-stats">
+                            <div class="performance-score">82%</div>
+                            <div class="performance-detail">3 quizzes ativos</div>
+                        </div>
+                    </div>
+                    <div class="performance-item">
+                        <div class="class-info">
+                            <h4>8° B</h4>
+                            <p>28 alunos</p>
+                        </div>
+                        <div class="performance-stats">
+                            <div class="performance-score">79%</div>
+                            <div class="performance-detail">2 quizzes ativos</div>
+                        </div>
+                    </div>
+                    <div class="performance-item">
+                        <div class="class-info">
+                            <h4>9° A</h4>
+                            <p>32 alunos</p>
+                        </div>
+                        <div class="performance-stats">
+                            <div class="performance-score">85%</div>
+                            <div class="performance-detail">4 quizzes ativos</div>
+                        </div>
+                    </div>
+                    <div class="performance-item">
+                        <div class="class-info">
+                            <h4>9° B</h4>
+                            <p>29 alunos</p>
+                        </div>
+                        <div class="performance-stats">
+                            <div class="performance-score">77%</div>
+                            <div class="performance-detail">3 quizzes ativos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="static/script.js"></script>
+</body>
+</html>

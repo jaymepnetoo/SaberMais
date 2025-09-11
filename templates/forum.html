@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórum - Saber+ Gestor</title>
+    <link rel="stylesheet" href="static\style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <div class="logo-icon">📚</div>
+                <div class="logo-text">
+                    <h1>Saber+ Gestor</h1>
+                    <p>Bem-vindo, Prof. Maria!</p>
+                </div>
+            </div>
+        </div>
+        <div class="header-right">
+            <button class="btn-primary">+ Criar Quiz</button>
+            <button class="btn-secondary">📊 Relatórios</button>
+            <button class="btn-secondary">🚪 Sair</button>
+        </div>
+    </header>
+
+    <!-- Navegação Principal -->
+    <nav class="main-nav">
+        <div class="nav-item" onclick="window.location.href='/homeprofessor'">Visão Geral</div>
+        <div class="nav-item" onclick="window.location.href='/meusquizzes'">Meus Quizzes</div>
+        <div class="nav-item" onclick="window.location.href='/turmas'">Turmas</div>
+        <div class="nav-item" onclick="window.location.href='/relatorios'">Relatórios</div>
+        <div class="nav-item active">Fórum</div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+        <div class="page-header">
+            <h1>Fórum de Dúvidas</h1>
+            <p>Gerencie as dúvidas dos alunos</p>
+        </div>
+
+        <!-- Estatísticas do Fórum -->
+        <div class="forum-stats">
+            <div class="forum-stat-card">
+                <div class="stat-number pending">8</div>
+                <div class="stat-label">
+                    <h3>Perguntas Pendentes</h3>
+                    <p>aguardando resposta</p>
+                </div>
+            </div>
+            <div class="forum-stat-card">
+                <div class="stat-number answered">24</div>
+                <div class="stat-label">
+                    <h3>Suas Respostas</h3>
+                    <p>este mês</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botão de Acesso ao Fórum -->
+        <div class="forum-access">
+            <button class="access-forum-btn">💬 Acessar Fórum</button>
+        </div>
+    </main>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
