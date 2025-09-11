@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conquistas e Badges</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            border-bottom: 1px solid #eee;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+        .header-buttons button {
+            background-color: #6a0dad;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        .header-buttons button.share {
+            background-color: #f0f2f5;
+            color: #333;
+            border: 1px solid #ccc;
+        }
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .card-header h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #555;
+        }
+        .card-content h2 {
+            margin: 0;
+            font-size: 36px;
+            color: #333;
+        }
+        .card-content p {
+            margin: 5px 0 0;
+            color: #777;
+            font-size: 14px;
+        }
+        .progress-bar-container {
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            height: 10px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+        .progress-bar {
+            background-color: #6a0dad;
+            height: 100%;
+            border-radius: 5px;
+        }
+        .badge-card {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+        }
+        .badge-card.achieved {
+            background-color: #e6ffe6;
+            border-color: #aaffaa;
+        }
+        .badge-card.achieved .badge-icon {
+            color: #28a745;
+        }
+        .badge-card.achieved .badge-status {
+            background-color: #28a745;
+            color: white;
+        }
+        .badge-card .badge-icon {
+            font-size: 40px;
+            margin-right: 15px;
+            color: #6a0dad;
+        }
+        .badge-info h4 {
+            margin: 0;
+            font-size: 16px;
+            color: #333;
+        }
+        .badge-info p {
+            margin: 5px 0 0;
+            font-size: 12px;
+            color: #777;
+        }
+        .badge-status {
+            margin-left: auto;
+            background-color: #ccc;
+            color: #555;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .goal-card {
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        .goal-card h3 {
+            margin-top: 0;
+            color: #555;
+        }
+        .goal-card p {
+            font-size: 14px;
+            color: #777;
+        }
+        .goal-progress {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            color: #333;
+            margin-top: 5px;
+        }
+        .goal-status {
+            background-color: #28a745;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Conquistas e Badges</h1>
+            <div class="header-buttons">
+                <button class="share">Compartilhar</button>
+                <button>Certificado</button>
+            </div>
+        </header>
+
+        <div class="dashboard-grid">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Badges Conquistadas</h3>
+                    <span class="material-icons">emoji_events</span>
+                </div>
+                <div class="card-content">
+                    <h2>3</h2>
+                    <p>de 6 disponíveis</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Pontos Totais</h3>
+                    <span class="material-icons">star</span>
+                </div>
+                <div class="card-content">
+                    <h2>2,450</h2>
+                    <p>+150 esta semana</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Sequência Atual</h3>
+                    <span class="material-icons">local_fire_department</span>
+                </div>
+                <div class="card-content">
+                    <h2>18</h2>
+                    <p>dias consecutivos</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Próximo Nível</h3>
+                    <span class="material-icons">military_tech</span>
+                </div>
+                <div class="card-content">
+                    <h2>87%</h2>
+                    <p>faltam 130 pontos</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-grid" style="grid-template-columns: 1fr 1fr;">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Badges Conquistadas</h3>
+                </div>
+                <p>Suas conquistas e marcos alcançados</p>
+
+                <div class="badge-card achieved">
+                    <span class="material-icons badge-icon">emoji_events</span>
+                    <div class="badge-info">
+                        <h4>Primeira Vitória</h4>
+                        <p>Complete seu primeiro quiz</p>
+                        <p>14/01/2024</p>
+                    </div>
+                    <span class="badge-status">Conquistada</span>
+                </div>
+
+                <div class="badge-card achieved">
+                    <span class="material-icons badge-icon">radio_button_checked</span>
+                    <div class="badge-info">
+                        <h4>Sequência de 5</h4>
+                        <p>Acerte 5 questões seguidas</p>
+                        <p>17/01/2024</p>
+                    </div>
+                    <span class="badge-status">Conquistada</span>
+                </div>
+
+                <div class="badge-card achieved">
+                    <span class="material-icons badge-icon">menu_book</span>
+                    <div class="badge-info">
+                        <h4>Especialista em Matemática</h4>
+                        <p>Complete 10 quizzes de matemática</p>
+                        <p>24/01/2024</p>
+                    </div>
+                    <span class="badge-status">Conquistada</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Próximas Conquistas</h3>
+                </div>
+                <p>Badges que você pode desbloquear</p>
+
+                <div class="badge-card">
+                    <span class="material-icons badge-icon">timer</span>
+                    <div class="badge-info">
+                        <h4>Velocista</h4>
+                        <p>Complete um quiz em menos de 5 minutos</p>
+                        <div class="progress-bar-container"><div class="progress-bar" style="width: 75%;"></div></div>
+                        <p class="goal-progress">75%</p>
+                    </div>
+                </div>
+
+                <div class="badge-card">
+                    <span class="material-icons badge-icon">people</span>
+                    <div class="badge-info">
+                        <h4>Colaborativo</h4>
+                        <p>Ajude 3 colegas no fórum</p>
+                        <div class="progress-bar-container"><div class="progress-bar" style="width: 33%;"></div></div>
+                        <p class="goal-progress">33%</p>
+                    </div>
+                </div>
+
+                <div class="badge-card">
+                    <span class="material-icons badge-icon">local_fire_department</span>
+                    <div class="badge-info">
+                        <h4>Sequência de Fogo</h4>
+                        <p>Mantenha uma sequência de 30 dias</p>
+                        <div class="progress-bar-container"><div class="progress-bar" style="width: 60%;"></div></div>
+                        <p class="goal-progress">60%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="margin-top: 20px;">
+            <div class="card-header">
+                <h3>Metas de Estudo</h3>
+            </div>
+            <p>Acompanhe seu progresso em relação às metas estabelecidas</p>
+
+            <div class="dashboard-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <div class="goal-card">
+                    <h3>Meta Semanal</h3>
+                    <p>Complete 5 quizzes esta semana</p>
+                    <div class="progress-bar-container"><div class="progress-bar" style="width: 60%;"></div></div>
+                    <div class="goal-progress"><span>Progresso</span><span>3/5</span></div>
+                    <p>Faltam 2 para completar</p>
+                </div>
+
+                <div class="goal-card">
+                    <h3>Meta Mensal</h3>
+                    <p>Mantenha média acima de 80%</p>
+                    <div class="progress-bar-container"><div class="progress-bar" style="width: 85%;"></div></div>
+                    <div class="goal-progress"><span>Progresso</span><span>85/80</span></div>
+                    <span class="goal-status">Meta Alcançada!</span>
+                </div>
+
+                <div class="goal-card">
+                    <h3>Meta Anual</h3>
+                    <p>Complete 200 quizzes no ano</p>
+                    <div class="progress-bar-container"><div class="progress-bar" style="width: 22.5%;"></div></div>
+                    <div class="goal-progress"><span>Progresso</span><span>45/200</span></div>
+                    <p>Faltam 155 para completar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
