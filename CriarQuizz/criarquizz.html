@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Quiz</title>
+    <link rel="stylesheet" href="criarquizz.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <i class="fas fa-book-open"></i>
+                <span>Criar Quiz</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <button class="btn-secondary" id="voltarBtn" aria-label="Voltar para página anterior">Voltar</button>
+            <button class="btn-primary" id="salvarQuizBtn" aria-label="Salvar quiz atual">
+                <i class="fas fa-save"></i>
+                Salvar Quiz
+            </button>
+        </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs" role="tablist">
+        <button class="nav-tab active" data-tab="informacoes" role="tab" aria-selected="true" aria-controls="informacoes">Informações Básicas</button>
+        <button class="nav-tab" data-tab="questoes" role="tab" aria-selected="false" aria-controls="questoes">Questões</button>
+        <button class="nav-tab" data-tab="materiais" role="tab" aria-selected="false" aria-controls="materiais">Materiais</button>
+        <button class="nav-tab" data-tab="assistente" role="tab" aria-selected="false" aria-controls="assistente">Assistente IA</button>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Informações Básicas Tab -->
+        <div class="tab-content active" id="informacoes" role="tabpanel" aria-labelledby="tab-informacoes">
+            <div class="content-section">
+                <h2>Configurações do Quiz</h2>
+                <p class="section-description">Defina as informações básicas e configurações do seu quiz</p>
+                
+                <form class="quiz-form" novalidate>
+                    <div class="form-group">
+                        <label for="tituloQuiz">Título do Quiz <span class="required">*</span></label>
+                        <input type="text" id="tituloQuiz" placeholder="Ex: Matemática - Equações do 2º Grau" value="" required aria-describedby="titulo-help">
+                        <small id="titulo-help" class="form-help">Digite um título descritivo para o seu quiz</small>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="materia">Matéria</label>
+                            <select id="materia" aria-describedby="materia-help">
+                                <option value="matematica" selected>Matemática</option>
+                                <option value="portugues">Português</option>
+                                <option value="historia">História</option>
+                                <option value="geografia">Geografia</option>
+                                <option value="ciencias">Ciências</option>
+                                <option value="fisica">Física</option>
+                                <option value="quimica">Química</option>
+                                <option value="biologia">Biologia</option>
+                            </select>
+                            <small id="materia-help" class="form-help">Selecione a matéria do quiz</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="turma">Turma</label>
+                            <select id="turma" aria-describedby="turma-help">
+                                <option value="8a" selected>8º A</option>
+                                <option value="8b">8º B</option>
+                                <option value="8c">8º C</option>
+                                <option value="9a">9º A</option>
+                                <option value="9b">9º B</option>
+                                <option value="9c">9º C</option>
+                            </select>
+                            <small id="turma-help" class="form-help">Selecione a turma destinatária</small>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="tempoLimite">Tempo Limite</label>
+                            <div class="input-with-suffix">
+                                <input type="number" id="tempoLimite" value="20" min="1" max="180" aria-describedby="tempo-help">
+                                <span class="input-suffix">minutos</span>
+                            </div>
+                            <small id="tempo-help" class="form-help">Tempo máximo para completar o quiz</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="dificuldade">Dificuldade</label>
+                            <select id="dificuldade" aria-describedby="dificuldade-help">
+                                <option value="facil" selected>Fácil</option>
+                                <option value="medio">Médio</option>
+                                <option value="dificil">Difícil</option>
+                            </select>
+                            <small id="dificuldade-help" class="form-help">Nível de dificuldade das questões</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="pontuacaoMaxima">Pontuação Máxima</label>
+                            <input type="number" id="pontuacaoMaxima" value="100" min="1" max="1000" aria-describedby="pontuacao-help">
+                            <small id="pontuacao-help" class="form-help">Pontuação total do quiz</small>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Questões Tab -->
+        <div class="tab-content" id="questoes" role="tabpanel" aria-labelledby="tab-questoes">
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Questões</h2>
+                    <button class="btn-primary" id="novaQuestaoBtn" aria-label="Criar nova questão">
+                        <i class="fas fa-plus"></i>
+                        Nova Questão
+                    </button>
+                </div>
+                
+                <!-- Question Types -->
+                <div class="question-types">
+                    <button class="question-type" data-type="multipla" aria-label="Criar questão de múltipla escolha">
+                        <div class="question-type-icon">
+                            <i class="fas fa-dot-circle"></i>
+                        </div>
+                        <h3>Múltipla Escolha</h3>
+                    </button>
+                    
+                    <button class="question-type" data-type="verdadeiro-falso" aria-label="Criar questão verdadeiro ou falso">
+                        <div class="question-type-icon">
+                            <i class="fas fa-check-square"></i>
+                        </div>
+                        <h3>Verdadeiro/Falso</h3>
+                    </button>
+                    
+                    <button class="question-type" data-type="dissertativa" aria-label="Criar questão dissertativa">
+                        <div class="question-type-icon">
+                            <i class="fas fa-edit"></i>
+                        </div>
+                        <h3>Dissertativa</h3>
+                    </button>
+                </div>
+                
+                <!-- Questions List -->
+                <div class="questions-list" id="questionsList">
+                    <!-- Questions will be dynamically added here -->
+                </div>
+                
+                <!-- Question Bank -->
+                <div class="question-bank">
+                    <h3>Banco de Questões</h3>
+                    <p class="section-description">Reutilize questões de outros quizzes ou crie novas</p>
+                    
+                    <div class="question-item">
+                        <div class="question-content">
+                            <h4>Qual é a fórmula de Bhaskara?</h4>
+                            <div class="question-meta">
+                                <span class="subject">Matemática</span>
+                                <span class="type">Múltipla Escolha</span>
+                                <span class="points">10 pontos</span>
+                            </div>
+                        </div>
+                        <div class="question-actions">
+                            <button class="btn-icon" title="Visualizar questão" aria-label="Visualizar questão">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="btn-icon" title="Adicionar questão" aria-label="Adicionar questão ao quiz">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Materiais Tab -->
+        <div class="tab-content" id="materiais" role="tabpanel" aria-labelledby="tab-materiais">
+            <div class="content-section">
+                <h2>Materiais de Apoio</h2>
+                <p class="section-description">Adicione vídeos, PDFs e links para auxiliar os alunos</p>
+                
+                <div class="material-types">
+                    <button class="material-type" data-type="video" aria-label="Adicionar vídeo explicativo">
+                        <div class="material-type-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3>Vídeo Explicativo</h3>
+                        <p class="material-description">Adicione vídeos do YouTube, Vimeo ou outros</p>
+                    </button>
+                    
+                    <button class="material-type" data-type="pdf" aria-label="Adicionar material PDF">
+                        <div class="material-type-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <h3>Material PDF</h3>
+                        <p class="material-description">Faça upload de documentos PDF</p>
+                    </button>
+                    
+                    <button class="material-type" data-type="link" aria-label="Adicionar link externo">
+                        <div class="material-type-icon">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <h3>Link Externo</h3>
+                        <p class="material-description">Adicione links para sites e recursos</p>
+                    </button>
+                </div>
+                
+                <!-- Materials List -->
+                <div class="materials-list" id="materialsList">
+                    <!-- Materials will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Assistente IA Tab -->
+        <div class="tab-content" id="assistente" role="tabpanel" aria-labelledby="tab-assistente">
+            <div class="content-section">
+                <h2>Assistente IA</h2>
+                <p class="section-description">Use inteligência artificial para gerar questões automaticamente</p>
+                
+                <div class="ai-assistant-placeholder">
+                    <i class="fas fa-robot"></i>
+                    <h3>Assistente IA em desenvolvimento</h3>
+                    <p>Em breve você poderá gerar questões automaticamente usando IA</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Question Modal -->
+    <div class="modal" id="questionModal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Nova Questão</h3>
+                <button class="modal-close" id="closeModal" aria-label="Fechar modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="question-form" novalidate>
+                    <div class="form-group">
+                        <label for="questionText">Pergunta <span class="required">*</span></label>
+                        <textarea id="questionText" placeholder="Digite sua pergunta aqui..." required aria-describedby="question-help"></textarea>
+                        <small id="question-help" class="form-help">Digite o enunciado da questão</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="questionType">Tipo de Questão</label>
+                        <select id="questionType" aria-describedby="type-help">
+                            <option value="multipla">Múltipla Escolha</option>
+                            <option value="verdadeiro-falso">Verdadeiro/Falso</option>
+                            <option value="dissertativa">Dissertativa</option>
+                        </select>
+                        <small id="type-help" class="form-help">Selecione o tipo de questão</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="questionPoints">Pontos</label>
+                        <input type="number" id="questionPoints" value="10" min="1" max="100" aria-describedby="points-help">
+                        <small id="points-help" class="form-help">Pontuação desta questão</small>
+                    </div>
+                    
+                    <div class="question-options" id="questionOptions">
+                        <!-- Options will be dynamically added here -->
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" id="cancelQuestion">Cancelar</button>
+                <button class="btn-primary" id="saveQuestion">Salvar Questão</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Material Modal -->
+    <div class="modal" id="materialModal" role="dialog" aria-labelledby="material-modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="material-modal-title">Adicionar Material</h3>
+                <button class="modal-close" id="closeMaterialModal" aria-label="Fechar modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="material-form" novalidate>
+                    <div class="form-group">
+                        <label for="materialTitle">Título do Material <span class="required">*</span></label>
+                        <input type="text" id="materialTitle" placeholder="Digite o título do material" required aria-describedby="material-title-help">
+                        <small id="material-title-help" class="form-help">Nome que aparecerá para os alunos</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="materialDescription">Descrição</label>
+                        <textarea id="materialDescription" placeholder="Descrição opcional do material" aria-describedby="material-desc-help"></textarea>
+                        <small id="material-desc-help" class="form-help">Breve descrição sobre o material</small>
+                    </div>
+                    
+                    <!-- Video specific fields -->
+                    <div class="material-fields" id="videoFields" style="display: none;">
+                        <div class="form-group">
+                            <label for="videoUrl">URL do Vídeo <span class="required">*</span></label>
+                            <input type="url" id="videoUrl" placeholder="https://www.youtube.com/watch?v=..." aria-describedby="video-url-help">
+                            <small id="video-url-help" class="form-help">Cole o link do YouTube, Vimeo ou outro serviço</small>
+                        </div>
+                    </div>
+                    
+                    <!-- PDF specific fields -->
+                    <div class="material-fields" id="pdfFields" style="display: none;">
+                        <div class="form-group">
+                            <label for="pdfFile">Arquivo PDF <span class="required">*</span></label>
+                            <div class="file-upload-area" id="pdfUploadArea">
+                                <input type="file" id="pdfFile" accept=".pdf" aria-describedby="pdf-file-help">
+                                <div class="file-upload-content">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <p>Clique para selecionar ou arraste o arquivo PDF aqui</p>
+                                    <small>Máximo 10MB</small>
+                                </div>
+                            </div>
+                            <small id="pdf-file-help" class="form-help">Selecione um arquivo PDF do seu computador</small>
+                        </div>
+                    </div>
+                    
+                    <!-- Link specific fields -->
+                    <div class="material-fields" id="linkFields" style="display: none;">
+                        <div class="form-group">
+                            <label for="linkUrl">URL do Link <span class="required">*</span></label>
+                            <input type="url" id="linkUrl" placeholder="https://exemplo.com" aria-describedby="link-url-help">
+                            <small id="link-url-help" class="form-help">Cole o link do site ou recurso</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="linkTarget">Abrir em</label>
+                            <select id="linkTarget" aria-describedby="link-target-help">
+                                <option value="_blank">Nova aba</option>
+                                <option value="_self">Mesma aba</option>
+                            </select>
+                            <small id="link-target-help" class="form-help">Como o link será aberto</small>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" id="cancelMaterial">Cancelar</button>
+                <button class="btn-primary" id="saveMaterial">Adicionar Material</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p>Processando...</p>
+        </div>
+    </div>
+
+    <script src="criarquizz.js"></script>
+</body>
+</html>
