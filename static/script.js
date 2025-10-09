@@ -20,12 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const reportsBtn = document.querySelector('.btn-secondary:nth-child(2)');
     const exitBtn = document.querySelector('.btn-secondary:nth-child(3)');
 
-    if (createQuizBtn) {
-        createQuizBtn.addEventListener('click', function() {
-            alert('Funcionalidade "Criar Quiz" seria implementada aqui!');
-        });
-    }
-
     if (reportsBtn) {
         reportsBtn.addEventListener('click', function() {
             window.location.href = '/relatorios';
@@ -232,5 +226,24 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     console.log('Sistema Saber+ Gestor inicializado com sucesso!');
+
+     async function carregarUsuario() {
+      try {
+        const resposta = await fetch('/api/user/current');
+        const dados = await resposta.json();
+
+        if (dados.success) {
+          document.getElementById('nome-usuario').textContent = dados.nome;
+        } else {
+          document.getElementById('nome-usuario').textContent = 'Usuário não autenticado';
+        }
+      } catch (erro) {
+        console.error('Erro ao carregar usuário:', erro);
+        document.getElementById('nome-usuario').textContent = 'Erro ao carregar usuário';
+      }
+    }
+
+    carregarUsuario();
 });
+
 

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazer Pergunta - Saber+ Fórum</title>
+    <link rel="stylesheet" href="static\aluno\Forum\forumaluno.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <div class="logo">
+                    <i class="fas fa-book"></i>
+                    <span>Saber+ Fórum</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <button class="btn-secondary" onclick="window.location.href='/homealuno'">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Sair
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Search and Actions -->
+            <div class="search-section">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Buscar dúvidas..." id="searchInput">
+                </div>
+                <div class="action-buttons">
+                    <button class="btn-secondary" id="filtersBtn">
+                        <i class="fas fa-filter"></i>
+                        Filtros
+                    </button>
+                    <button class="btn-primary" id="newQuestionBtn">
+                        <i class="fas fa-plus"></i>
+                        Nova Pergunta
+                    </button>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="navigation-buttons">
+                <button class="nav-btn" onclick="window.location.href='/forumaluno'">Perguntas</button>
+                <button class="nav-btn" onclick="window.location.href='/respostasforum'">Respostas Recentes</button>
+                <button class="nav-btn active">Fazer Pergunta</button>
+            </div>
+
+            <!-- Ask Question Content -->
+            <div class="content-area" id="fazerContent">
+                <div class="question-form">
+                    <div class="form-header">
+                        <h2>Faça uma nova pergunta</h2>
+                        <p>Descreva sua dúvida com detalhes para receber a melhor ajuda</p>
+                    </div>
+                    
+                    <form id="questionForm">
+                        <div class="form-group">
+                            <label for="questionTitle">Título da pergunta</label>
+                            <input type="text" id="questionTitle" name="questionTitle" placeholder="Ex: Como resolver equação do 2° grau?" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="questionSubject">Matéria</label>
+                            <input type="text" id="questionSubject" name="questionSubject" placeholder="Ex: Matemática, História, Ciências..." required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="questionDescription">Descrição detalhada</label>
+                            <textarea id="questionDescription" name="questionDescription" rows="6" placeholder="Descreva sua dúvida com detalhes..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-publish">
+                            <i class="fas fa-paper-plane"></i>
+                            Publicar Pergunta
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="static\script_fazer_pergunta.js"></script>
+</body>
+</html>
