@@ -1,0 +1,254 @@
+/* Relatorio Desempenho */
+
+/* ======= BASE GERAL ======= */
+body {
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+  background-color: #f9fafc;
+  margin: 0;
+  padding: 0;
+  color: #1e293b;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 16px 28px;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+
+.logo-text h1 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #4f46e5;
+}
+
+.logo-text p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.header-right button {
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  color: #1e293b;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.header-right button:hover {
+  background: #f1f5f9;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  color: #fff;
+  border: none;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* ======= CONTEÚDO PRINCIPAL ======= */
+.main-content {
+  padding: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  padding: 24px 32px;
+  margin-bottom: 24px;
+  border: 1px solid #e2e8f0;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #1e293b;
+}
+
+.section-header p {
+  margin: 4px 0 16px;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+/* ======= PERÍODOS ======= */
+.period-options {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.period-btn {
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #475569;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.period-btn:hover {
+  background: #f1f5f9;
+}
+
+.period-btn.active {
+  background: #1e293b;
+  color: #fff;
+}
+
+/* ======= ABAS ======= */
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin: 18px 0;
+  background: #f8fafc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tab-btn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  color: #64748b;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.tab-btn.active {
+  background: #fff;
+  color: #1e293b;
+  border-bottom: 3px solid #6366f1;
+}
+
+/* ======= INDICADORES ======= */
+.stats-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 18px;
+  margin: 24px 0 32px;
+}
+
+.summary-item {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.summary-label {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.summary-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+.summary-sub {
+  font-size: 0.8rem;
+  color: #16a34a;
+  margin-top: 6px;
+}
+
+/* ======= RANKING ======= */
+.ranking {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  padding: 24px 28px;
+}
+
+.ranking h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #1e293b;
+}
+
+.ranking p {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.ranking-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ranking-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9fafb;
+  padding: 12px 18px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.ranking-item:hover {
+  background: #f1f5f9;
+}
+
+.ranking-item span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ranking-item strong {
+  color: #16a34a;
+}
+
+.medal {
+  font-size: 1.2rem;
+}
+
+.medal.gold { color: #facc15; }
+.medal.silver { color: #9ca3af; }
+.medal.bronze { color: #d97706; }
+
+.logo-icon img { width: 64px; 
+    height: 64px; 
+    object-fit: contain; 
+    border-radius: 12px; 
+}

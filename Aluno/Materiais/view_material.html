@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saber+ Aluno - Visualizar Material</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <span class="logo-icon">📚</span>
+                <div class="logo-text">
+                    <h1>Saber+ Aluno</h1>
+                    <p>Visualizar Material</p>
+                </div>
+            </div>
+        </div>
+        <div class="header-right">
+            <button class="logout-btn" onclick="window.location.href='materials.html';">
+                <span class="logout-icon">↩️</span>
+                Voltar para Materiais
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="material-view-section">
+            <div class="section-card">
+                <div class="section-header">
+                    <h2 id="material-title">Título do Material</h2>
+                    <p id="material-subtitle">Assunto - Professor - Data</p>
+                </div>
+                
+                <div class="material-content" id="material-display-area">
+                    <!-- Conteúdo do material será carregado aqui (ex: iframe para PDF, vídeo, texto) -->
+                    <p>Carregando conteúdo do material...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-item">
+            <div class="footer-icon">🏆</div>
+            <div class="footer-content">
+                <h4>Conquistas</h4>
+                <p>Ver badges e metas</p>
+            </div>
+        </div>
+        
+        <div class="footer-item">
+            <div class="footer-icon">💬</div>
+            <div class="footer-content">
+                <h4>Fórum</h4>
+                <p>Tire suas dúvidas</p>
+            </div>
+        </div>
+        
+        <div class="footer-item">
+            <div class="footer-icon">📊</div>
+            <div class="footer-content">
+                <h4>Histórico</h4>
+                <p>Ver resultados anteriores</p>
+            </div>
+        </div>
+        
+        <div class="footer-item">
+            <div class="footer-icon">📚</div>
+            <div class="footer-content">
+                <h4>Materiais de Estudo</h4>
+                <p>Conteúdo dos Professores</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="view_material.js"></script>
+</body>
+</html>

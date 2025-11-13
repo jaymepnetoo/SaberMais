@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatório de Desempenho - Saber+ Gestor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="header-left">
+      <div class="logo">
+        <div class="logo-icon"><img src="../../../images/logo.jpg" alt="Logo Saber+"></div>
+        <div class="logo-text">
+          <h1>Saber+ </h1>
+          <p>Relatórios</p>
+        </div>
+      </div>
+    </div>
+    <div class="header-right">
+      <button class="btn-primary">Exportar</button>
+      <button class="btn-secondary" onclick="window.location.href='../Relatorios.html'">Sair</button>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="main-content">
+    <div class="section-card">
+      <div class="section-header">
+        <h2>Relatórios de Desempenho</h2>
+      </div>
+
+      <!-- Períodos -->
+      <div class="period-options">
+        <button class="period-btn">Última Semana</button>
+        <button class="period-btn active">Último Mês</button>
+        <button class="period-btn">Trimestre</button>
+        <button class="period-btn">Ano Letivo</button>
+      </div>
+
+      <!-- Abas -->
+<div class="tabs">
+  <button class="tab-btn active" onclick="window.location.href='RelatorioDesempenho.html'">Desempenho Individual</button>
+  <button class="tab-btn" onclick="window.location.href='ComparativoTurmas.html'">Comparativo Turmas</button>
+  <button class="tab-btn" onclick="window.location.href='EvolucaoTemporal.html'">Evolução Temporal</button>
+  <button class="tab-btn" onclick="window.location.href='Institucional.html'">Institucional</button>
+</div>
+
+      <!-- Indicadores -->
+      <div class="stats-summary">
+        <div class="summary-item">
+          <div class="summary-label">Média Geral</div>
+          <div class="summary-value">84.2%</div>
+          <p class="summary-sub">+5.2% vs período anterior</p>
+        </div>
+        <div class="summary-item">
+          <div class="summary-label">Taxa de Participação</div>
+          <div class="summary-value">92%</div>
+          <p class="summary-sub">156 de 170 alunos</p>
+        </div>
+        <div class="summary-item">
+          <div class="summary-label">Quizzes Realizados</div>
+          <div class="summary-value">1,248</div>
+          <p class="summary-sub">+18% vs período anterior</p>
+        </div>
+        <div class="summary-item">
+          <div class="summary-label">Tempo Médio</div>
+          <div class="summary-value">12min</div>
+          <p class="summary-sub">por quiz</p>
+        </div>
+      </div>
+
+      <!-- Ranking -->
+      <div class="ranking">
+        <h3>Ranking de Desempenho</h3>
+        <p>Top 5 alunos com melhor desempenho no período</p>
+        <ul class="ranking-list">
+          <li class="ranking-item">
+            <span class="medal gold">🥇</span> João Silva — 15 quizzes realizados — <strong>92%</strong>
+          </li>
+          <li class="ranking-item">
+            <span class="medal silver">🥈</span> Maria Santos — 14 quizzes realizados — <strong>88%</strong>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <script src="RelatorioDesempenho.js"></script>
+</body>
+</html>

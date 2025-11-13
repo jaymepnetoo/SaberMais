@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saber+ Fórum</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ===== Estilos adicionais das abas ===== */
+    .forum-tabs {
+      background: #f1f5f9;
+      display: flex;
+      justify-content: space-around;
+      padding: 0.75rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .tab {
+      background: none;
+      border: none;
+      font-weight: 600;
+      color: #475569;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .tab.active {
+      color: #6366f1;
+      border-bottom: 2px solid #6366f1;
+      padding-bottom: 0.25rem;
+    }
+
+    .tab:hover {
+      color: #4f46e5;
+    }
+
+    /* Conteúdo das abas */
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Formulário de nova pergunta */
+    .new-question-form {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .new-question-form input,
+    .new-question-form textarea {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+    }
+
+    .new-question-form button {
+      background: #6366f1;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .new-question-form button:hover {
+      background: #4f46e5;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <div class="logo">
+        <div class="logo-icon"><img src="../../images/logo.jpg" alt="Logo Saber+"></div>
+        <div class="logo-text">
+          <h1>Saber+ Fórum</h1>
+        </div>
+      </div>
+    </div>
+    <div class="header-right">
+      <button class="btn-secondary" onclick="window.location.href='Foruns.html'">
+        <div class="cabeçalho-icon"><img src="../../images/sair.jpg" alt="Sair"></div> Sair
+      </button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="forum-container">
+      <div class="forum-header">
+        <input type="text" placeholder="Buscar dúvidas..." class="search-bar" />
+        <div class="forum-actions">
+          <button class="btn-secondary">Filtros</button>
+          <button class="btn-primary">+ Nova Pergunta</button>
+        </div>
+      </div>
+
+      <!-- Abas -->
+      <div class="forum-tabs">
+        <button class="tab active" data-tab="perguntas">Perguntas</button>
+        <button class="tab" data-tab="respostas">Respostas Recentes</button>
+        <button class="tab" data-tab="nova">Fazer Pergunta</button>
+      </div>
+
+      <!-- Conteúdo das abas -->
+      <div id="perguntas" class="tab-content active">
+        <div class="forum-question-card">
+          <div class="tags">
+            <span class="tag">Matemática</span>
+            <span class="tag answered">Respondida</span>
+          </div>
+          <h3>Como resolver equação do 2º grau?</h3>
+          <p>Estou com dificuldade em entender o método de Bhaskara. Alguém pode me ajudar?</p>
+          <small>João Silva • 2 horas atrás</small>
+          <div class="card-footer">
+            <span>👍 12</span> <span>💬 8</span>
+          </div>
+        </div>
+
+        <div class="forum-question-card">
+          <div class="tags">
+            <span class="tag">História</span>
+            <span class="tag pending">Pendente</span>
+          </div>
+          <h3>Dúvida sobre Segunda Guerra Mundial</h3>
+          <p>Qual foi o papel do Brasil na Segunda Guerra Mundial?</p>
+          <small>Maria Santos • 5 horas atrás</small>
+          <div class="card-footer">
+            <span>👍 8</span> <span>💬 5</span>
+          </div>
+        </div>
+
+        <div class="forum-question-card">
+          <div class="tags">
+            <span class="tag">Ciências</span>
+            <span class="tag answered">Respondida</span>
+          </div>
+          <h3>Sistema Solar - Planetas</h3>
+          <p>Por que Plutão não é mais considerado um planeta?</p>
+          <small>Pedro Costa • 1 dia atrás</small>
+          <div class="card-footer">
+            <span>👍 15</span> <span>💬 12</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="respostas" class="tab-content">
+        <div class="forum-question-card">
+          <div class="tags">
+            <span class="tag">Matemática</span>
+          </div>
+          <h3>Melhor explicação do método de Bhaskara</h3>
+          <p>Confira uma resposta detalhada sobre como aplicar corretamente a fórmula de Bhaskara.</p>
+          <small>Respondido por Ana Lima • 1 hora atrás</small>
+        </div>
+
+        <div class="forum-question-card">
+          <div class="tags">
+            <span class="tag">História</span>
+          </div>
+          <h3>O Brasil e a FEB na Segunda Guerra</h3>
+          <p>O Brasil enviou tropas conhecidas como FEB (Força Expedicionária Brasileira)...</p>
+          <small>Respondido por Lucas Ribeiro • 3 horas atrás</small>
+        </div>
+      </div>
+
+      <div id="nova" class="tab-content">
+        <div class="new-question-form">
+          <h3>Fazer uma nova pergunta</h3>
+          <input type="text" placeholder="Título da pergunta" />
+          <textarea rows="5" placeholder="Descreva sua dúvida..."></textarea>
+          <button>Enviar Pergunta</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // ===== Troca de abas =====
+    const tabs = document.querySelectorAll(".tab");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        // Remove estado ativo anterior
+        tabs.forEach((t) => t.classList.remove("active"));
+        tabContents.forEach((content) => content.classList.remove("active"));
+
+        // Ativa aba atual
+        tab.classList.add("active");
+        document.getElementById(tab.dataset.tab).classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>
+

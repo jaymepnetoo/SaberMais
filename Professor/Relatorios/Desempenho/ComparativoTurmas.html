@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparativo de Turmas - Saber+ Gestor</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <div class="logo">
+        <div class="logo-icon"><img src="../../../images/logo.jpg" alt="Logo Saber+"></div>
+        <div class="logo-text">
+          <h1>Saber+</h1>
+          <p>Relatórios</p>
+        </div>
+      </div>
+    </div>
+    <div class="header-right">
+      <button class="btn-primary">Exportar</button>
+      <button class="btn-secondary" onclick="window.location.href='../Relatorios.html'">Sair</button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="section-card">
+      <div class="section-header">
+        <h2>Relatórios de Desempenho</h2>
+      </div>
+
+      <div class="period-options">
+        <button class="period-btn">Última Semana</button>
+        <button class="period-btn active">Último Mês</button>
+        <button class="period-btn">Trimestre</button>
+        <button class="period-btn">Ano Letivo</button>
+      </div>
+
+      <!-- Abas -->
+      <div class="tabs">
+        <button class="tab-btn" onclick="window.location.href='RelatorioDesempenho.html'">Desempenho Individual</button>
+        <button class="tab-btn active">Comparativo Turmas</button>
+        <button class="tab-btn" onclick="window.location.href='EvolucaoTemporal.html'">Evolução Temporal</button>
+        <button class="tab-btn" onclick="window.location.href='Institucional.html'">Institucional</button>
+      </div>
+
+      <section class="tab-section active">
+        <h3>Comparativo entre Turmas</h3>
+        <p>Análise do desempenho médio por turma</p>
+        <canvas id="chartTurmas"></canvas>
+      </section>
+    </div>
+  </main>
+
+  <script src="RelatorioDesempenho.js"></script>
+</body>
+</html>

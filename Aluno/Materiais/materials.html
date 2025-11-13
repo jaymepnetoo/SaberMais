@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saber+ Aluno - Materiais de Estudo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <div class="logo-icon"><img src="../../images/logo.jpg"></div>
+                <div class="logo-text">
+                    <h1>Saber+</h1>
+                    <p>Bem-vindo!</p>
+                </div>
+            </div>
+        </div>
+        <div class="header-right">
+            <button class="dashboard-btn" onclick="window.location.href='../FrontPage/index.html';">Início</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="materials-section">
+            <div class="section-card">
+                <div class="section-header">
+                    <h2>Conteúdo Enviado pelos Professores</h2>
+                    <p>Aqui você encontra materiais de apoio para seus estudos.</p>
+                </div>
+                
+                <div class="materials-list">
+                    <!-- Exemplo de Material -->
+                    <div class="material-item">
+                        <div class="material-header">
+                            <h3>Matemática - Resumo de Equações do 2º Grau</h3>
+                            <span class="material-type">📄 PDF</span>
+                        </div>
+                        <div class="material-details">
+                            <span class="material-subject">📐 Matemática</span>
+                            <span class="material-teacher">🧑‍🏫 Prof. Ana Paula</span>
+                            <span class="material-date">📅 15/10/2025</span>
+                        </div>
+                        <button class="material-btn view-btn">
+                            <span class="btn-icon">👁️</span>
+                            Visualizar Material
+                        </button>
+                    </div>
+                    
+                    <div class="material-item">
+                        <div class="material-header">
+                            <h3>História - Vídeo sobre a Segunda Guerra Mundial</h3>
+                            <span class="material-type">▶️ Vídeo</span>
+                        </div>
+                        <div class="material-details">
+                            <span class="material-subject">📚 História</span>
+                            <span class="material-teacher">🧑‍🏫 Prof. Carlos Mendes</span>
+                            <span class="material-date">📅 14/10/2025</span>
+                        </div>
+                        <button class="material-btn view-btn">
+                            <span class="btn-icon">👁️</span>
+                            Visualizar Material
+                        </button>
+                    </div>
+
+                    <div class="material-item">
+                        <div class="material-header">
+                            <h3>Ciências - Artigo sobre o Sistema Solar</h3>
+                            <span class="material-type">📝 Artigo</span>
+                        </div>
+                        <div class="material-details">
+                            <span class="material-subject">🔬 Ciências</span>
+                            <span class="material-teacher">🧑‍🏫 Prof. Laura Guedes</span>
+                            <span class="material-date">📅 13/10/2025</span>
+                        </div>
+                        <button class="material-btn view-btn">
+                            <span class="btn-icon">👁️</span>
+                            Visualizar Material
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-item">
+                <div class="nav-item" onclick="window.location.href='../Badges/badge.html'">
+                    <div class="footer-icon"><img src="../../images/TROFÉU.jpg"></div>
+                    <div class="footer-content">
+                    <h4>Conquistas</h4>
+                    <p>Ver badges e metas</p>
+                    </div>
+                </div>
+        </div>
+        
+        <div class="footer-item">
+                <div class="nav-item" onclick="window.location.href='../Forum/index.html'">
+                    <div class="footer-icon"><img src="../../images/Forum.jpg"></div>
+                    <div class="footer-content">
+                    <h4>Fórum</h4>
+                    <p>Tire suas dúvidas</p>
+                    </div>
+                </div>
+        </div>
+        
+        <div class="footer-item" id="materials-link">
+                <div class="nav-item" onclick="window.location.href='../Historico/history.html'">
+                    <div class="footer-icon"><img src="../../images/HistoricoA.jpg"></div>
+                    <div class="footer-content">
+                    <h4>Histórico</h4>
+                    <p>Ver resultados anteriores</p>
+                    </div>
+                </div>
+        </div>
+    </footer>
+
+    <script src="script.JS"></script>
+</body>
+</html>

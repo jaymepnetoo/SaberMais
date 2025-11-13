@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saber+ Fórum</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <div class="logo-icon"><img src="../../images/logo.jpg"></div>
+                <div class="logo-text">
+                    <h1>Saber+</h1>
+                    <p>Bem-vindo!</p>
+                </div>
+            </div>
+        </div>
+        <div class="header-right">
+            <button class="dashboard-btn" onclick="window.location.href='../FrontPage/index.html';">Início</button>
+        </div>
+    </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Search and Actions -->
+            <div class="search-section">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Buscar dúvidas..." id="searchInput">
+                </div>
+                <div class="action-buttons">
+                    <button class="btn-secondary" id="filtersBtn">
+                        <i class="fas fa-filter"></i>
+                        Filtros
+                    </button>
+                    <button class="btn-primary" id="newQuestionBtn" onclick="window.location.href='fazer_pergunta.html'">
+                        <i class="fas fa-plus"></i>
+                        Nova Pergunta
+                    </button>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="navigation-buttons">
+                <button class="nav-btn active">Perguntas</button>
+                <button class="nav-btn" onclick="window.location.href='respostas.html'">Respostas Recentes</button>
+                <button class="nav-btn" onclick="window.location.href='fazer_pergunta.html'">Fazer Pergunta</button>
+            </div>
+
+            <!-- Questions Content -->
+            <div class="content-area" id="perguntasContent">
+                <!-- Question Card 1 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="tags">
+                            <span class="tag category">Matemática</span>
+                            <span class="tag status answered">Respondida</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="question-title">Como resolver equação do 2° grau?</h3>
+                        <p class="question-description">Estou com dificuldade em entender o método de Bhaskara. Alguém pode me ajudar?</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="author-info">
+                            <span class="author">João Silva</span>
+                            <span class="time">2 horas atrás</span>
+                        </div>
+                        <div class="interactions">
+                            <button class="interaction-btn">
+                                <i class="fas fa-thumbs-up"></i>
+                                <span>12</span>
+                            </button>
+                            <button class="interaction-btn">
+                                <i class="fas fa-comment"></i>
+                                <span>5</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question Card 2 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="tags">
+                            <span class="tag category">História</span>
+                            <span class="tag status pending">Pendente</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="question-title">Dúvida sobre Segunda Guerra Mundial</h3>
+                        <p class="question-description">Qual foi o papel do Brasil na Segunda Guerra Mundial?</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="author-info">
+                            <span class="author">Maria Santos</span>
+                            <span class="time">5 horas atrás</span>
+                        </div>
+                        <div class="interactions">
+                            <button class="interaction-btn">
+                                <i class="fas fa-thumbs-up"></i>
+                                <span>8</span>
+                            </button>
+                            <button class="interaction-btn">
+                                <i class="fas fa-comment"></i>
+                                <span>3</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question Card 3 -->
+                <div class="question-card">
+                    <div class="card-header">
+                        <div class="tags">
+                            <span class="tag category">Ciências</span>
+                            <span class="tag status answered">Respondida</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="question-title">Sistema Solar - Planetas</h3>
+                        <p class="question-description">Por que Plutão não é mais considerado um planeta?</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="author-info">
+                            <span class="author">Pedro Costa</span>
+                            <span class="time">1 dia atrás</span>
+                        </div>
+                        <div class="interactions">
+                            <button class="interaction-btn">
+                                <i class="fas fa-thumbs-up"></i>
+                                <span>15</span>
+                            </button>
+                            <button class="interaction-btn">
+                                <i class="fas fa-comment"></i>
+                                <span>12</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

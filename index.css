@@ -1,0 +1,122 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to bottom right, #f9fbff, #f3f0ff);
+    }
+
+    .container {
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #5a42f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+
+    .logo span {
+      margin-left: 8px;
+      color: #5a42f5;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 24px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      text-align: left;
+    }
+
+    .card h2 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: #222;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 20px;
+    }
+
+    /* Abas */
+    .tabs {
+      display: flex;
+      border-bottom: 1px solid #eee;
+      margin-bottom: 20px;
+    }
+
+    .tab {
+      flex: 1;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+      font-weight: bold;
+      color: #666;
+      background: #f8f8f8;
+      border-radius: 6px 6px 0 0;
+      transition: 0.2s;
+    }
+
+    .tab.active {
+      background: #fff;
+      color: #222;
+      border-bottom: 2px solid #5a42f5;
+    }
+
+    /* Inputs */
+    label {
+      font-size: 14px;
+      display: block;
+      margin-bottom: 6px;
+      color: #444;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    /* Botão */
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(to right, #4a68f5, #9442f5);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+    .logo img { width: 64px; height: 64px; object-fit: contain; border-radius: 12px; }

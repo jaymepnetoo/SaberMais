@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respostas Recentes - Saber+ Fórum</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <div class="logo">
+                    <i class="fas fa-book"></i>
+                    <span>Saber+ Fórum</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <button class="btn-secondary">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Sair
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Search and Actions -->
+            <div class="search-section">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Buscar dúvidas..." id="searchInput">
+                </div>
+                <div class="action-buttons">
+                    <button class="btn-secondary" id="filtersBtn">
+                        <i class="fas fa-filter"></i>
+                        Filtros
+                    </button>
+                    <button class="btn-primary" id="newQuestionBtn" onclick="window.location.href='fazer_pergunta.html'">
+                        <i class="fas fa-plus"></i>
+                        Nova Pergunta
+                    </button>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="navigation-buttons">
+                <button class="nav-btn" onclick="window.location.href='index.html'">Perguntas</button>
+                <button class="nav-btn active">Respostas Recentes</button>
+                <button class="nav-btn" onclick="window.location.href='fazer_pergunta.html'">Fazer Pergunta</button>
+            </div>
+
+            <!-- Recent Answers Content -->
+            <div class="content-area" id="respostasContent">
+                <!-- Answer Card 1 -->
+                <div class="answer-card">
+                    <div class="answer-body">
+                        <h3 class="answer-title">Como resolver equação do 2° grau?</h3>
+                        <p class="answer-description">Para resolver uma equação do 2° grau, você pode usar a fórmula de Bhaskara...</p>
+                    </div>
+                    <div class="answer-footer">
+                        <div class="author-info">
+                            <span class="author">Prof. Maria</span>
+                            <span class="time">1 hora atrás</span>
+                        </div>
+                        <div class="interactions">
+                            <button class="interaction-btn">
+                                <i class="fas fa-thumbs-up"></i>
+                                <span>5</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Answer Card 2 -->
+                <div class="answer-card">
+                    <div class="answer-body">
+                        <h3 class="answer-title">Dúvida sobre Segunda Guerra Mundial</h3>
+                        <p class="answer-description">O Brasil entrou na guerra em 1942, enviando a FEB (Força Expedicionária Brasileira)...</p>
+                    </div>
+                    <div class="answer-footer">
+                        <div class="author-info">
+                            <span class="author">Prof. Carlos</span>
+                            <span class="time">3 horas atrás</span>
+                        </div>
+                        <div class="interactions">
+                            <button class="interaction-btn">
+                                <i class="fas fa-thumbs-up"></i>
+                                <span>8</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Answer Card 3 -->
+                <div class="answer-card">
+                    <div class="answer-body">
+                        <h3 class="answer-title">Sistema Solar - Planetas</h3>
+                        <p class="answer-description">Plutão foi reclassificado como planeta anão em 2006 pela União Astronômica Internacional porque não atende aos três critérios para ser considerado um planeta...</p>
+                    </div>
+                    <div class="answer-footer">
+                        <div class="author-info">
+                            <span class="author">Prof. Ana</span>
+                            <span class="time">6 horas atrás</span>
+                        </div>
+                        <div class="interactions">
+                            <button class="interaction-btn">
+                                <i class="fas fa-thumbs-up"></i>
+                                <span>12</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Answer Card 4 -->
+                <div class="answer-card">
+                    <div class="answer-body">
+                        <h3 class="answer-title">Fotossíntese em plantas</h3>
+                        <p class="answer-description">A fotossíntese é o processo pelo qual as plantas convertem luz solar, água e dióxido de carbono em glicose e oxigênio...</p>
+                    </div>
+                    <div class="answer-footer">
+                        <div class="author-info">
+                            <span class="author">Prof. João</span>
+                            <span class="time">1 dia atrás</span>
+                        </div>
+                        <div class="interactions">
+                            <button class="interaction-btn">
+                                <i class="fas fa-thumbs-up"></i>
+                                <span>9</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

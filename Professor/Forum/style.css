@@ -1,0 +1,309 @@
+/* Reset e configurações básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f8fafc;
+    color: #334155;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+.header {
+    background: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-icon img { width: 64px; 
+    height: 64px; 
+    object-fit: contain; 
+    border-radius: 12px; 
+}
+
+.logo-text h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+}
+
+.logo-text p {
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+.header-right {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.btn-primary {
+    background: #6366f1;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    
+}
+
+.btn-primary:hover {
+    background: #5855eb;
+}
+
+.btn-secondary {
+    display: flex;
+    align-items: center; 
+    gap: 8px; 
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.cabeçalho-icon img {
+    width: 30px; 
+    height: 30px; 
+    object-fit: contain; 
+    border-radius: 12px;
+}
+
+/* Navegação Principal */
+.main-nav {
+    background: white;
+    padding: 0 2rem;
+    display: flex;
+    gap: 2rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.nav-item {
+    padding: 1rem 0;
+    cursor: pointer;
+    font-weight: 500;
+    color: #64748b;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.nav-item:hover {
+    color: #475569;
+}
+
+.nav-item.active {
+    color: #1e293b;
+    border-bottom-color: #6366f1;
+}
+
+/* Conteúdo Principal */
+.main-content {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos para Fórum */
+.forum-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.forum-stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.forum-stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.stat-number.pending {
+    background: #f59e0b;
+}
+
+.stat-number.answered {
+    background: #10b981;
+}
+
+.stat-label h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.25rem;
+}
+
+.stat-label p {
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+.forum-access {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.access-forum-btn {
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.access-forum-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+}
+
+/* ===== Página Principal do Fórum ===== */
+.forum-container {
+    background: #f8fafc;
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+.forum-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.search-bar {
+    width: 50%;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+}
+
+.forum-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.forum-tabs {
+    background: #f1f5f9;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.tab {
+    background: none;
+    border: none;
+    font-weight: 600;
+    color: #475569;
+    cursor: pointer;
+}
+
+.tab.active {
+    color: #6366f1;
+}
+
+.forum-question-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.forum-question-card h3 {
+    margin-bottom: 0.25rem;
+    color: #1e293b;
+}
+
+.forum-question-card p {
+    color: #475569;
+    margin-bottom: 0.5rem;
+}
+
+.tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.tag {
+    background: #e2e8f0;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #475569;
+}
+
+.tag.answered {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.tag.pending {
+    background: #fef9c3;
+    color: #92400e;
+}
+
+.card-footer {
+    display: flex;
+    gap: 1rem;
+    color: #475569;
+    font-size: 0.9rem;
+}

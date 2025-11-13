@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saber+ - Histórico de Quizzes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <div class="logo">
+                <div class="logo-icon"><img src="../../images/logo.jpg"></div>
+                <div class="logo-text">
+                    <h1>Saber+</h1>
+                    <p>Bem-vindo!</p>
+                </div>
+            </div>
+        </div>
+        <div class="header-right">
+            <button class="dashboard-btn" onclick="window.location.href='../FrontPage/index.html';">Início</button>
+        </div>
+    </header>
+
+
+
+
+
+    <main class="main-content">
+        <section class="history-section">
+            <div class="section-card">
+                <div class="section-header">
+                    <h2>Seu Histórico de Quizzes</h2>
+                    <p>Revise seus quizzes anteriores e acompanhe seu progresso.</p>
+                </div>
+                
+                <div class="quiz-history-list">
+                    <!-- Exemplo de Quiz Concluído -->
+                    <div class="history-item">
+                        <div class="history-header">
+                            <h3>Matemática - Equações do 2º Grau</h3>
+                            <span class="history-score success">⭐ 90%</span>
+                        </div>
+                        <div class="history-details">
+                            <span class="history-subject">📐 Matemática</span>
+                            <span class="history-date">📅 10/10/2025</span>
+                            <span class="history-questions">❓ 15 questões</span>
+                        </div>
+                        <button class="history-btn result-btn">
+                            <span class="btn-icon">👁️</span>
+                            Ver Resultado Detalhado
+                        </button>
+                    </div>
+                    
+                    <div class="history-item">
+                        <div class="history-header">
+                            <h3>História - Primeira Guerra Mundial</h3>
+                            <span class="history-score warning">⭐ 65%</span>
+                        </div>
+                        <div class="history-details">
+                            <span class="history-subject">📚 História</span>
+                            <span class="history-date">📅 05/10/2025</span>
+                            <span class="history-questions">❓ 20 questões</span>
+                        </div>
+                        <button class="history-btn result-btn">
+                            <span class="btn-icon">👁️</span>
+                            Ver Resultado Detalhado
+                        </button>
+                    </div>
+
+                    <div class="history-item">
+                        <div class="history-header">
+                            <h3>Ciências - Ciclo da Água</h3>
+                            <span class="history-score success">⭐ 80%</span>
+                        </div>
+                        <div class="history-details">
+                            <span class="history-subject">🔬 Ciências</span>
+                            <span class="history-date">📅 01/10/2025</span>
+                            <span class="history-questions">❓ 10 questões</span>
+                        </div>
+                        <button class="history-btn result-btn">
+                            <span class="btn-icon">👁️</span>
+                            Ver Resultado Detalhado
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-item">
+                <div class="nav-item" onclick="window.location.href='../Badges/badge.html'">
+                    <div class="footer-icon"><img src="../../images/TROFÉU.jpg"></div>
+                    <div class="footer-content">
+                    <h4>Conquistas</h4>
+                    <p>Ver badges e metas</p>
+                    </div>
+                </div>
+        </div>
+        
+        <div class="footer-item">
+                <div class="nav-item" onclick="window.location.href='../Forum/index.html'">
+                    <div class="footer-icon"><img src="../../images/Forum.jpg"></div>
+                    <div class="footer-content">
+                    <h4>Fórum</h4>
+                    <p>Tire suas dúvidas</p>
+                    </div>
+                </div>
+        </div>
+        
+        <div class="footer-item" id="materials-link">
+                <div class="nav-item" onclick="window.location.href='../Materiais/materials.html'">
+                    <div class="footer-icon"><img src="../../images/MaterialDeEstudo.jpg"></div>
+                    <div class="footer-content">
+                    <h4>Histórico</h4>
+                    <p>Ver resultados anteriores</p>
+                    </div>
+                </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

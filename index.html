@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saber+ - Login</title>
+  <link rel="stylesheet" href="index.css">
+
+
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="./images/logo.jpg"><span>Saber+</span>
+    </div>
+    <p class="subtitle">Acesse sua plataforma educacional personalizada</p>
+
+    <div class="card">
+      <h2>Bem-vindo de volta!</h2>
+      <p>Entre na sua conta ou crie uma nova para começar</p>
+
+      <!-- Abas -->
+      <div class="tabs" role="tablist">
+        <button type="button" class="tab active" id="tab-login" role="tab" aria-controls="form-login" aria-selected="true">Entrar</button>
+        <button type="button" class="tab" id="tab-register" role="tab" aria-controls="form-register" aria-selected="false">Registrar</button>
+      </div>
+
+      <!-- Mensagens globais -->
+      <div id="global-feedback" aria-live="polite"></div>
+
+      <!-- Formulário -->
+      <form id="form-login" class="auth-form" role="tabpanel" aria-labelledby="tab-login" novalidate>
+        <label for="login-email">Email</label>
+        <input id="login-email" name="email" type="email" placeholder="seu@email.com" autocomplete="email" required>
+
+        <label for="login-password">Senha</label>
+        <input id="login-password" name="password" type="password" placeholder="********" autocomplete="current-password" minlength="6" required>
+
+        <div class="form-feedback" id="login-feedback" aria-live="polite"></div>
+
+        <button type="submit" class="btn" data-loading-text="Entrando...">Entrar</button>
+      </form>
+
+      <form id="form-register" class="auth-form" role="tabpanel" aria-labelledby="tab-register" style="display:none;" hidden novalidate>
+        <label for="register-name">Nome</label>
+        <input id="register-name" name="name" type="text" placeholder="Seu nome" autocomplete="name" minlength="2" required>
+
+        <label for="register-email">Email</label>
+        <input id="register-email" name="email" type="email" placeholder="seu@email.com" autocomplete="email" required>
+
+        <label for="register-institution">Instituição</label>
+        <input id="register-institution" name="institutionCode" type="text" placeholder="Código da instituição parceira" inputmode="numeric" required>
+
+        <label for="register-password">Senha</label>
+        <input id="register-password" name="password" type="password" placeholder="********" autocomplete="new-password" minlength="6" required>
+
+        <div class="form-feedback" id="register-feedback" aria-live="polite"></div>
+
+        <button type="submit" class="btn" data-loading-text="Registrando...">Registrar</button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="scripts/auth.js"></script>
+</body>
+</html>
